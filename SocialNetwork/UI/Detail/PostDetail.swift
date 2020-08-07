@@ -9,33 +9,73 @@
 import SwiftUI
 
 struct PostDetail : View {
+    var name: String
     var userName: String
     var imageName: String
     var likes: Int
     var description: String
     var views: Int
     var downloads: Int
-    var body: some View {
-        
-        VStack(spacing: 15.0) {
-            Image(imageName)
-            Text(userName)
-                .font(.body)
+    
+    @Environment(\.presentationMode) var mode: Binding<PresentationMode>
 
-            Text(String(likes))
-                .font(.body)
-            Divider()
+    var body: some View {
+
+        VStack(spacing: 15.0) {
+            Text(userName)
+                .font(.custom("HelveticaNeue-Medium", size: 16))
+                .foregroundColor(.black)
+            Image(imageName)
+                .resizable()
+                .scaledToFit()
+            HStack {
+                Text(name)
+                    .font(.custom("HelveticaNeue-Medium", size: 16))
+                    .foregroundColor(.black)
+                Spacer()
+                Button(action: {
+                               
+                               
+                }) {
+                    VStack {
+                        Image(systemName: "heart")
+                            .renderingMode(.original)
+                            .frame(maxWidth: .infinity, alignment: .trailing)
+                    }
+                }
+            }
+
+            VStack(spacing: 15.0) {
+                
+            Text(String("\(likes) Likes - \(views) Views - \(downloads) Downloads")).font(.footnote).frame(maxWidth: .infinity, alignment: .leading)
+                .font(.custom("HelveticaNeue-Light", size: 14))
+                .foregroundColor(Color("LightGrayColor"))
+
             Text(description)
-                .font(.body)
-                .multilineTextAlignment(.center)
-                .lineLimit(50)
-        }.padding().navigationBarTitle(Text(userName), displayMode: .inline)
+                .font(.custom("HelveticaNeue-Light", size: 14))
+                .multilineTextAlignment(.leading)
+                .foregroundColor(Color(.black))
+            }
+            Spacer()
+
+        }
+        .padding()
+        .navigationBarBackButtonHidden(true)
+        .navigationBarItems(leading: Button(action : {
+            self.mode.wrappedValue.dismiss()
+        }){
+            Image(systemName: "arrow.left").foregroundColor(.gray)
+        }, trailing: Button(action : {
+
+        }){
+            Image("Menu").foregroundColor(.gray)
+        })
     }
 }
 
 struct PostDetail_Previews : PreviewProvider {
     static var previews: some View {
-        PostDetail(userName: "@RosieDel", imageName: "photo",  likes: 100, description: "The pearl in the ocean! The ocean always makes me feel like we are ‘at the end of the world’. A deep feeling of loneliness and wildness at the same time. In this travel, we stayed in Reiseland for 4 nights to explore it. We had a chance to see the giant sea turtles, too! I definitely loved it!",
+        PostDetail(name: "Alexander Nolan", userName: "@RosieDel", imageName: "photo",  likes: 100, description: "The pearl in the ocean! The ocean always makes me feel like we are ‘at the end of the world’. A deep feeling of loneliness and wildness at the same time. In this travel, we stayed in Reiseland for 4 nights to explore it. We had a chance to see the giant sea turtles, too! I definitely loved it!",
             views: 1000,
             downloads : 20)
     }

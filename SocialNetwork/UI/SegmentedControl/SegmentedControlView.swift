@@ -25,9 +25,8 @@ struct SegmentedControlView : View {
                     Text("Popular")
                         .padding(.horizontal, 5)
                         .padding(.vertical, 0)
-                        .font(.body)
-                    Image( self.selected == 0 ? "lineSelected" : "")
-                        .frame(width: 60, height: 10)
+                        .font(.custom("HelveticaNeue-Medium", size: 16))
+                    
                 }
             }
             .foregroundColor(self.selected == 0 ? .black : .gray)
@@ -41,9 +40,7 @@ struct SegmentedControlView : View {
                      Text("New")
                          .padding(.horizontal, 5)
                          .padding(.vertical, 0)
-                         .font(.body)
-                    Image( self.selected == 1 ? "lineSelected" : "")
-                        .frame(width: 60, height: 10)
+                         .font(.custom("HelveticaNeue-Medium", size: 16))
                 }
             }
             .foregroundColor(self.selected == 1 ? .black : .gray)
@@ -57,9 +54,7 @@ struct SegmentedControlView : View {
                               Text("Follow")
                                   .padding(.horizontal, 5)
                                   .padding(.vertical, 0)
-                                  .font(.body)
-                             Image( self.selected == 2 ? "lineSelected" : "")
-                                 .frame(width: 60, height: 10)
+                                  .font(.custom("HelveticaNeue-Medium", size: 16))
                          }
                      }
                      .foregroundColor(self.selected == 2 ? .black : .gray)

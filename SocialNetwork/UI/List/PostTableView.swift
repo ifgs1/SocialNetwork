@@ -14,6 +14,7 @@ struct PostTableView: View {
     var body: some View {
         NavigationView {
             VStack(spacing: 10) {
+                Spacer()
                 SegmentedControlView(selected: self.$selected)
                     .frame(maxWidth: .infinity, alignment: .leading)
                     if self.selected == 0 {
@@ -22,6 +23,8 @@ struct PostTableView: View {
                         PostList()
                     }
             }.background(Color(.white).edgesIgnoringSafeArea(.all))
+            .navigationBarTitle("")
+            .navigationBarHidden(true)
         }
     }
 }

@@ -15,7 +15,7 @@ struct PostTableView: View {
         NavigationView {
             VStack(spacing: 10) {
                 Spacer()
-                SegmentedControlView(selected: self.$selected)
+                SegmentedControlView(selected: self.$selected, options: ["Popular", "New", "Follow"])
                     .frame(maxWidth: .infinity, alignment: .leading)
                     if self.selected == 0 {
                         PostList()

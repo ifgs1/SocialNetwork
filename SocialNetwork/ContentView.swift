@@ -19,7 +19,7 @@ struct ContentView: View {
             Spacer()
             TabBarView()
             
-        }.background(Color(.gray).edgesIgnoringSafeArea(.top))
+        }.background(Color(.white).edgesIgnoringSafeArea(.top))
     }
 }
 

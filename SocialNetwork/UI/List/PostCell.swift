@@ -12,7 +12,6 @@ struct PostCell : View {
     let post: Post
     var body: some View {
         return NavigationLink(destination: PostDetail(name: post.name, userName: post.userName, imageName: post.imageName, likes: post.likes, description: post.description, views: post.views, downloads: post.downloads)) {
-            
             VStack(alignment: .leading) {
                 Image(post.imageName)
                     .resizable()

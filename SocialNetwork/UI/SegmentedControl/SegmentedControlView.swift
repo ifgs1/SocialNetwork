@@ -11,6 +11,7 @@ import SwiftUI
 struct SegmentedControlView : View {
     
     @Binding var selected : Int
+    var options: [String]
     
     var body : some View {
         
@@ -22,7 +23,7 @@ struct SegmentedControlView : View {
                 
             }) {
                 VStack {
-                    Text("Popular")
+                    Text(options[0])
                         .padding(.horizontal, 5)
                         .padding(.vertical, 0)
                         .font(.custom("HelveticaNeue-Medium", size: 16))
@@ -37,7 +38,7 @@ struct SegmentedControlView : View {
                 
             }) {
                 VStack {
-                     Text("New")
+                     Text(options[1])
                          .padding(.horizontal, 5)
                          .padding(.vertical, 0)
                          .font(.custom("HelveticaNeue-Medium", size: 16))
@@ -51,7 +52,7 @@ struct SegmentedControlView : View {
                          
                      }) {
                          VStack {
-                              Text("Follow")
+                              Text(options[2])
                                   .padding(.horizontal, 5)
                                   .padding(.vertical, 0)
                                   .font(.custom("HelveticaNeue-Medium", size: 16))
@@ -67,6 +68,6 @@ struct SegmentedControlView : View {
 
 struct SegmentedControlView_Previews: PreviewProvider {
     static var previews: some View {
-        SegmentedControlView(selected: .constant(0))
+        SegmentedControlView(selected: .constant(0), options: ["Popular", "New", "Follow"])
     }
 }

@@ -12,22 +12,19 @@ struct TabBarPreviewView: View {
         
     var body: some View {
         
-        VStack{
-            
-            // Your View.....
+        VStack {
             Spacer()
-            TabBarView()
-            
+            TabBarView(optionSelected:  .constant(0))
         }.background(Color(.gray).edgesIgnoringSafeArea(.top))
     }
 }
 
 struct TabBarView : View  {
-    @State var selected = 0
+    @Binding var optionSelected : Int
 
     var body : some View {
-        ZStack(alignment: .top){
-            HorizontalView(selected: self.$selected)
+        ZStack(alignment: .top) {
+            HorizontalView(optionSelected: self.$optionSelected)
                 .padding()
                 .padding(.horizontal, 22)
                 .background(CurvedButton())
@@ -46,28 +43,28 @@ struct TabBarView : View  {
 
 struct HorizontalView : View {
     
-    @Binding var selected : Int
+    @Binding var optionSelected : Int
     
-    var body : some View{
+    var body : some View {
         VStack {
-            HStack{
+            HStack {
                 Button(action: {
-                    self.selected = 0
+                    self.optionSelected = 0
                 }) {
                     Image(systemName: "house")
-                }.foregroundColor(self.selected == 0 ? .blue : .gray)
+                }.foregroundColor(self.optionSelected == 0 ? .blue : .gray)
                 
                 Spacer(minLength: 24)
                 
                 Button(action: {
                     
-                    self.selected = 1
+                    self.optionSelected = 1
                     
                 }) {
                     
                     Image(systemName: "person")
                     
-                }.foregroundColor(self.selected == 1 ? .blue : .gray)
+                }.foregroundColor(self.optionSelected == 1 ? .blue : .gray)
             }
         }
     }
@@ -75,7 +72,7 @@ struct HorizontalView : View {
 
 struct CurvedButton : View {
     
-    var body : some View{
+    var body : some View {
         
         Path{path in
             

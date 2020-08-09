@@ -19,8 +19,10 @@ struct PostTableView: View {
                     .frame(maxWidth: .infinity, alignment: .leading)
                     if self.selected == 0 {
                         PostList()
-                    } else {
+                    } else if self.selected == 1 {
                         PostList()
+                    } else {
+                    
                     }
             }.background(Color(.white).edgesIgnoringSafeArea(.all))
             .navigationBarTitle("")
@@ -40,28 +42,6 @@ struct PostList : View {
             }
         }.onAppear {
          UITableView.appearance().separatorStyle = .none
-        }
-    }
-}
-
-struct ListHeader: View {
-    var title = ""
-    var count = 0
-    var body: some View {
-        HStack {
-            Text(title)
-                .font(.body)
-            Button(action: {
-                // Add action for see all
-            }) {
-                HStack {
-                    Text("see all (\(count))")
-                        .font(.body)
-                }.padding()
-                 .background(Color.clear)
-                 .foregroundColor(Color(.white))
-                 .frame(maxWidth: .infinity, alignment: .trailing)
-            }.cornerRadius(15)
         }
     }
 }

@@ -90,6 +90,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F262EE4A24E0424A004B388E /* NewPost */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NewPost;
+			sourceTree = "<group>";
+		};
+		F262EE4B24E04257004B388E /* PostList */ = {
+			isa = PBXGroup;
+			children = (
+				F28A9CA324DDAF5C00A6E1F5 /* PostCell.swift */,
+				F28A9C9B24DDAD3A00A6E1F5 /* PostTableView.swift */,
+			);
+			path = PostList;
+			sourceTree = "<group>";
+		};
 		F28A9C5A24DD9B3500A6E1F5 = {
 			isa = PBXGroup;
 			children = (
@@ -175,8 +191,8 @@
 		F28A9C9A24DDAD2D00A6E1F5 /* List */ = {
 			isa = PBXGroup;
 			children = (
-				F28A9CA324DDAF5C00A6E1F5 /* PostCell.swift */,
-				F28A9C9B24DDAD3A00A6E1F5 /* PostTableView.swift */,
+				F262EE4B24E04257004B388E /* PostList */,
+				F262EE4A24E0424A004B388E /* NewPost */,
 			);
 			path = List;
 			sourceTree = "<group>";

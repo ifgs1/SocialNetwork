@@ -10,14 +10,19 @@ import SwiftUI
 
 
 struct ContentView: View {
-    
+    @State var optionSelected = 0
+
     var body: some View {
         
-        VStack{
-            PostTableView()
+        VStack {
+            if self.optionSelected == 0 {
+                PostTableView()
+            } else {
+                ProfileView()
+            }
             // Your View.....
             Spacer()
-            TabBarView()
+            TabBarView(optionSelected: self.$optionSelected)
             
         }.background(Color(.white).edgesIgnoringSafeArea(.top))
     }

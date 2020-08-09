@@ -19,7 +19,7 @@ For more information regarging the Designs used and the different screens please
 ![SocialNetwork](imgs/Profile.png)
 
 ### Complete interaction
-![SocialNetwork](imgs/SocialNetwork.png)
+![SocialNetwork](imgs/SocialNetwork.gif)
 
 
 ## License

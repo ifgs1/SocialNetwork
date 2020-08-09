@@ -20,9 +20,9 @@ struct PostTableView: View {
                     if self.selected == 0 {
                         PostList()
                     } else if self.selected == 1 {
-                        PostList()
+                        NewPostTableView()
                     } else {
-                    
+                        PostList()
                     }
             }.background(Color(.white).edgesIgnoringSafeArea(.all))
             .navigationBarTitle("")
@@ -38,7 +38,12 @@ struct PostList : View {
     var body: some View {
         List {
             ForEach(posts) { post in
-                PostCell(post: post)
+                ZStack {
+                    PostCell(post: post)
+                    NavigationLink(destination: PostDetail(name: post.name, userName: post.userName, imageName: post.imageName, likes: post.likes, description: post.description, views: post.views, downloads: post.downloads)) {
+                            EmptyView()
+                        }.buttonStyle(PlainButtonStyle())
+                }
             }
         }.onAppear {
          UITableView.appearance().separatorStyle = .none

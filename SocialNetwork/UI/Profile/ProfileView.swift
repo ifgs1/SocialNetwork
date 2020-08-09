@@ -20,10 +20,10 @@ struct ProfileView: View {
     var body: some View {
         NavigationView {
             VStack(spacing: 15.0) {
-                Text("@NolanAlex")
+                Text("@ifgs1")
                     .font(.custom("HelveticaNeue-Medium", size: 16.0))
                 Image("ProfilePicture")
-                Text("Alexander Nolan")
+                Text("Ivan Garcia")
                     .font(.custom("HelveticaNeue-Medium", size: 20.0))
                 Text("Photography lover from 8 years ")
                     .font(.custom("HelveticaNeue-Regular", size: 14.0))

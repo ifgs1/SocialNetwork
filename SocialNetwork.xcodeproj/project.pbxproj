@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F262EE4D24E042CB004B388E /* NewPostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F262EE4C24E042CB004B388E /* NewPostCell.swift */; };
+		F262EE4F24E04856004B388E /* NewPostTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F262EE4E24E04856004B388E /* NewPostTableView.swift */; };
+		F262EE5224E04EF9004B388E /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F262EE5124E04EF9004B388E /* CustomButton.swift */; };
 		F28A9C6724DD9B3500A6E1F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28A9C6624DD9B3500A6E1F5 /* AppDelegate.swift */; };
 		F28A9C6924DD9B3500A6E1F5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28A9C6824DD9B3500A6E1F5 /* SceneDelegate.swift */; };
 		F28A9C6B24DD9B3500A6E1F5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28A9C6A24DD9B3500A6E1F5 /* ContentView.swift */; };
@@ -42,6 +45,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F262EE4C24E042CB004B388E /* NewPostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostCell.swift; sourceTree = "<group>"; };
+		F262EE4E24E04856004B388E /* NewPostTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostTableView.swift; sourceTree = "<group>"; };
+		F262EE5124E04EF9004B388E /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		F28A9C6324DD9B3500A6E1F5 /* SocialNetwork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialNetwork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F28A9C6624DD9B3500A6E1F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F28A9C6824DD9B3500A6E1F5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -93,6 +99,8 @@
 		F262EE4A24E0424A004B388E /* NewPost */ = {
 			isa = PBXGroup;
 			children = (
+				F262EE4C24E042CB004B388E /* NewPostCell.swift */,
+				F262EE4E24E04856004B388E /* NewPostTableView.swift */,
 			);
 			path = NewPost;
 			sourceTree = "<group>";
@@ -104,6 +112,14 @@
 				F28A9C9B24DDAD3A00A6E1F5 /* PostTableView.swift */,
 			);
 			path = PostList;
+			sourceTree = "<group>";
+		};
+		F262EE5024E04EE7004B388E /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				F262EE5124E04EF9004B388E /* CustomButton.swift */,
+			);
+			path = Button;
 			sourceTree = "<group>";
 		};
 		F28A9C5A24DD9B3500A6E1F5 = {
@@ -171,6 +187,7 @@
 		F28A9C9624DD9D0900A6E1F5 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				F262EE5024E04EE7004B388E /* Button */,
 				F28A9CA524DDAF9400A6E1F5 /* Detail */,
 				F28A9C9D24DDADA600A6E1F5 /* SegmentedControl */,
 				F28A9C9A24DDAD2D00A6E1F5 /* List */,
@@ -360,11 +377,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F262EE5224E04EF9004B388E /* CustomButton.swift in Sources */,
+				F262EE4F24E04856004B388E /* NewPostTableView.swift in Sources */,
 				F28A9C6724DD9B3500A6E1F5 /* AppDelegate.swift in Sources */,
 				F28A9C9F24DDADA600A6E1F5 /* SegmentedControlView.swift in Sources */,
 				F29A4E2B24DEF32F00DDE495 /* ProfileView.swift in Sources */,
 				F28A9C6924DD9B3500A6E1F5 /* SceneDelegate.swift in Sources */,
 				F28A9CA724DDAF9F00A6E1F5 /* PostDetail.swift in Sources */,
+				F262EE4D24E042CB004B388E /* NewPostCell.swift in Sources */,
 				F28A9CA224DDAF1700A6E1F5 /* Post.swift in Sources */,
 				F28A9C9C24DDAD3A00A6E1F5 /* PostTableView.swift in Sources */,
 				F28A9C6B24DD9B3500A6E1F5 /* ContentView.swift in Sources */,

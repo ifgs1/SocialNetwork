@@ -38,9 +38,7 @@ struct PostDetail : View {
                                
                 }) {
                     VStack {
-                        Image(systemName: "heart")
-                            .renderingMode(.original)
-                            .frame(maxWidth: .infinity, alignment: .trailing)
+                        CustomButton()
                     }
                 }
             }

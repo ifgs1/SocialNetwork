@@ -56,17 +56,16 @@ struct DataModel: Identifiable {
 struct CollectionView: View {
     let data: DataModel
     var body: some View {
-    VStack {
-        HStack {
-            ForEach(0..<2) { items in
-                Spacer()
-                    Image(self.data.imageName)
-                Spacer()
+        VStack {
+            HStack {
+                ForEach(0..<2) { items in
+                    Spacer()
+                        Image(self.data.imageName)
+                    Spacer()
+                }
             }
         }
-    
-   }
- }
+    }
 }
 
 struct ProfileView_Previews: PreviewProvider {

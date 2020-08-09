@@ -9,8 +9,6 @@
 import SwiftUI
 
 struct NewPostTableView: View {
-    @State var selected = 0
-
     var body: some View {
         NavigationView {
             VStack(spacing: 10) {

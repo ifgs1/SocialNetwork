@@ -29,7 +29,7 @@ struct ProfileView: View {
                     .font(.custom("HelveticaNeue-Regular", size: 14.0))
                     .foregroundColor(Color("LightGrayColor"))
                 
-                SegmentedControlView(selected: self.$selected, options: [Option(id: 0, option: "Photos"), Option(id: 1, option: "Likes"), Option(id: 2, option: "Marks")])
+                SegmentedControlView(selected: self.$selected, segments: [Segment(id: 0, segmentName: "Photos"), Segment(id: 1, segmentName: "Likes"), Segment(id: 2, segmentName: "Marks")])
                 List {
                     ForEach(data) { items in
                             CollectionView(data: items)

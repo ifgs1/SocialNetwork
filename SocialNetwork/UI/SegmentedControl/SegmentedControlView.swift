@@ -8,66 +8,38 @@
 
 import SwiftUI
 
-struct SegmentedControlView : View {
-    
+struct Option: Identifiable {
+    var id: Int
+    var option: String
+}
+
+struct SegmentedControlView: View {
     @Binding var selected : Int
-    var options: [String]
-    
-    var body : some View {
-        
+    var options: [Option]
+
+    var body: some View {
         HStack {
-            
-            Button(action: {
-                
-                self.selected = 0
-                
-            }) {
-                VStack {
-                    Text(options[0])
-                        .padding(.horizontal, 5)
-                        .padding(.vertical, 0)
-                        .font(.custom("HelveticaNeue-Medium", size: 16))
-                    
-                }
+            ForEach(options) { option in
+                Button(action: {
+                    self.selected = option.id
+                })
+                {
+                    VStack {
+                        Text(option.option)
+                            .padding(.horizontal, 5)
+                            .padding(.vertical, 0)
+                            .font(.custom("HelveticaNeue-Medium", size: 16))
+                    }
+                }.foregroundColor(self.selected == option.id ? .black : .gray)
             }
-            .foregroundColor(self.selected == 0 ? .black : .gray)
-            
-            Button(action: {
-                
-                self.selected = 1
-                
-            }) {
-                VStack {
-                     Text(options[1])
-                         .padding(.horizontal, 5)
-                         .padding(.vertical, 0)
-                         .font(.custom("HelveticaNeue-Medium", size: 16))
-                }
-            }
-            .foregroundColor(self.selected == 1 ? .black : .gray)
-            
-            Button(action: {
-                         
-                         self.selected = 2
-                         
-                     }) {
-                         VStack {
-                              Text(options[2])
-                                  .padding(.horizontal, 5)
-                                  .padding(.vertical, 0)
-                                  .font(.custom("HelveticaNeue-Medium", size: 16))
-                         }
-                     }
-                     .foregroundColor(self.selected == 2 ? .black : .gray)
-                     
-            }.padding(20)
-            .clipShape(Capsule())
-            .animation(.default)
+        }.padding(20)
+        .clipShape(Capsule())
+        .animation(.default)
     }
 }
 
 struct SegmentedControlView_Previews: PreviewProvider {
     static var previews: some View {
-        SegmentedControlView(selected: .constant(0), options: ["Popular", "New", "Follow"])
+        SegmentedControlView(selected: .constant(0), options: [Option(id: 0, option: "Popular"), Option(id: 1, option: "New"), Option(id: 2, option: "Follow")])
     }
 }
